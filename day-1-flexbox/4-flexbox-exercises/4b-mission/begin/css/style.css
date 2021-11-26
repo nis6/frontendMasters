@@ -13,14 +13,10 @@ Clearly there is more you could place in variables, up to you if you want to use
     --color9: #ae2012;
     --color10: #9b2226;
 }
-
-
 /* generic site styles */
-
 html {
     box-sizing: border-box;
 }
-
 *,
 *::before,
 *::after {
@@ -49,16 +45,35 @@ section h2 {
 New styles begin here and continue to the end of the page 
 ****************/
 
-section ul {
+section ul{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-evenly;
+    gap: 1%;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    margin-top: 1rem;
+}
+section li{
+    flex-basis: 32.5%;
+}
+section.mission{
+    margin-bottom: 1 rem;
+    max-height: 50vh;
 }
 
 
 /* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
-
 Spelled out the individual border styles so border-color could go elsewhere. Styling is the same for all borders except the color. */
+.mission>p{
+    display: flow-root;
+}/**doesn't change anything tho**/
+.mission img{
+    float: left;
+    shape-outside:polygon(0 0, 48% 100%, 100% 0);/**to be corrected in css**/
+    max-height: 200px;
+}
 
 figure {
     margin: 0 0 0.5rem 0;
@@ -143,26 +158,41 @@ figcaption a {
 
 /* turn on flexbox here - prior to this, elements stacked individually as blocks */
 
-@media (min-width: 550px) {
+
+
+@media (max-width: 800px) {
     section ul {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row wrap ;
         justify-content: space-between;
     }
     section li {
-        flex-basis: 49.5%;
+        flex-basis: 48.5%;
     }
-    /* turn off object position, inherit object-fit: cover */
-    figure img {
-        object-position: 0;
-    }
-}
-
-@media (min-width: 800px) {
     section h2 {
         margin-left: 100px;
     }
+   
+}
+
+@media (max-width: 550px) {
+    section ul {
+        display: flex;
+        flex-direction: column ;
+        justify-content: space-between;
+    }
     section li {
-        flex-basis: 32.5%;
+        flex-basis: 100%;
+    }
+    /* turn off object position, inherit object-fit: cover */
+    figure img {
+        object-position: 0px -200px;
+    }
+    section.mission{
+        margin-bottom: 1rem;
+        min-height: 60vh;
+    }
+    .mission>img{
+        float: none;
     }
 }

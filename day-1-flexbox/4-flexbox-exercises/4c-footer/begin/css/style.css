@@ -97,7 +97,7 @@ figcaption a {
     color: var(--color1);
 }
 
-
+/**/
 /* style is doing double duty, styling border color and hover color. Only one declaration usually applies though.  */
 
 .color2,
@@ -152,8 +152,43 @@ figcaption a {
     max-height: 100px;
     display: block;
 }
+footer{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    height: 50vh;
+    background-color: #e9d8a6;
+    padding: 1.5rem;
+    margin-top: 3%;
+}
+footer h4{
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+}
+footer ul{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1rem;
+    display: flex;
+    gap: 4%;
+}
+footer li{
+    list-style: none;
+}
+footer a{
+    text-decoration: none;
+    color: #001219;
 
-
+}
+footer img{
+    width: 40px;
+    height: 40px;
+}
+footer address{
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    line-height: 1.5rem;
+}
 /* turn on flexbox here - prior to this, elements stacked individually as blocks */
 
 @media (min-width: 550px) {
@@ -179,6 +214,12 @@ figcaption a {
         float: left;
         shape-outside: polygon(35.84% 94.87%, 34.64% 87.05%, 51.64% 4.06%, 55.1% 2.38%);
         max-height: 211px;
+    }
+
+    footer{
+        display: flex;
+        justify-content: space-around;
+        height: 30vh;
     }
 }
 
