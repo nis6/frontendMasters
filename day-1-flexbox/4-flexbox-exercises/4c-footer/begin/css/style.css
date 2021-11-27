@@ -162,6 +162,7 @@ footer{
 }
 footer h4{
     font-weight: bolder;
+    font-size: 0.9rem;
     margin-bottom: 0.5rem;
 }
 footer ul{
@@ -187,7 +188,8 @@ footer address{
     font-weight: bold;
     font-family: 'Lato', sans-serif;
     font-style: normal;
-    line-height: 1.5rem;
+    line-height: 1rem;
+    font-size: 0.7rem;
 }
 /* turn on flexbox here - prior to this, elements stacked individually as blocks */
 
@@ -219,6 +221,7 @@ footer address{
     footer{
         display: flex;
         justify-content: space-around;
+        align-items: baseline;
         height: 30vh;
     }
 }
@@ -229,5 +232,9 @@ footer address{
     }
     section li {
         flex-basis: 32.5%;
+    }
+    footer{
+        padding-top:0 ;
+        align-items: center;
     }
 }
