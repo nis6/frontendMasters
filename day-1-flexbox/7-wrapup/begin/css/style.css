@@ -20,7 +20,10 @@ Clearly there is more you could place in variables, up to you if you want to use
 html {
     box-sizing: border-box;
 }
-
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
 *,
 *::before,
 *::after {
@@ -137,6 +140,32 @@ nav a:hover {
     max-height: 454px;
 }
 
+.popular{
+    width: 100%;
+    max-height: fit-content;
+    background-color: #005f73;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.gallery{
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 2%;
+}
+.popular h2{
+    padding: 1rem;
+    margin-left: 2rem;
+}
+.gallery figure{
+    flex-basis: 30%;
+}
+.gallery figure img{
+    object-position: 0 -5em;
+}
 
 /* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
 
@@ -187,7 +216,7 @@ figcaption a {
 /* featured image styles */
 
 #featured figure {
-    max-height: 650px;
+    max-height: 550px;
 }
 
 #featured img {
